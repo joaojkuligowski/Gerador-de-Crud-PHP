@@ -27,7 +27,17 @@ $list = Crud::read($get_table, $get_id);
         <?php foreach ($fields as $field) { ?>
         <div class="mb-3">
             <label for="<?php echo $field['column_name'] ?>" class="form-label"><?php echo Label::get($field['column_name']) ?></label>
-            <input type="text" class="form-control" id="<?php echo $field['column_name'] ?>" name="<?php echo $field['column_name'] ?>" value="<?php echo $list[$field['column_name']] ?>">    
+            <?php 
+if($field['column_name'] == 'password'){
+    $input_type = 'password';
+    $input_value = '';
+} else {
+    $input_type = 'text';
+    $input_value = $list[$field['column_name']];
+}
+?>
+<input type="<?php echo $input_type ?>" class="form-control" id="<?php echo $field['column_name'] ?>" name="<?php echo $field['column_name'] ?>" value="<?php echo $input_value ?>">
+    
         </div>
         <?php } ?>
         <button type="button" class="btn btn-primary" data-bs-update="modal">Salvar</button>
