@@ -2,12 +2,21 @@
 
 Um sistema simples para controle de veículos, motoristas e ocorrências de utilização de veículos. 
 
+DEMO: http://93.190.137.139:8155/testeecg/
+Usuário: demo
+Senha: demo
 
+## Instalação ##
+
+`git clone https://github.com/joaojkuligowski/testeecg.git`
+`cd testeecg`
 `composer install`
+`composer dumpautoload`
+`cp .env_example .env`
 
-Editar /config/configs.php e inserir os dados de seu banco de dados. 
+Editar Arquivo .env inserindo seu banco de dados
 
-Criar as tabelas
+## Criar as tabelas e semear com alguns dados falsos ##
 
 `composer criar-database`
 
@@ -15,7 +24,12 @@ Rodar Servidor
 
 `composer servidor`
 
-Acesse: localhost:8001
+Acesse: localhost:8001 ou clone o repositório em seu apache em seu apache (Requer php  >= 8.0, Mcrypt, Pdo e Mbstring)
+
+## Criando um crud ##
+- Crie uma tabela no banco de dados
+- Faça as traduções do frontend necessárias em app/Label.php (Exemplo, se a tabela for cadastros, traduza para Cadastros, pois é o que vai aparecer no menu)
+- Caso precise alterar o comportamento de algum campo do crud (Ou do formulário como um todo), altere o arquivo /assets/js/scripts.js e /app/helpers/crud.php
 
 ## Características ##
 
