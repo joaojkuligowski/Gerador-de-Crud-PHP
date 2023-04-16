@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 0);
 include_once 'vendor/autoload.php';
 
 use Pages\Header;
