@@ -1,0 +1,31 @@
+{
+    "name": "joaojkuligowski/testeecg",
+    "description": "Sistema de Cadastro e controle de veículos",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "João P.J. Kuligowski",
+            "email": "joaojkuligowski@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "scripts": {
+        "criar-database": [
+            "@php config/criar_db.php"
+        ],
+        "servidor": [
+            "@php -S localhost:8001"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "App\\Helpers\\": "app/helpers/",
+            "Pages\\": "pages/"
+        }
+    }
+}
