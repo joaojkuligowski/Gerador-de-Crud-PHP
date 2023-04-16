@@ -62,7 +62,7 @@ switch
                                     $input_value = '';
                                 } else {
                                     $input_type = 'text';
-                                    $input_value = $list[$field['column_name']];
+                                    $input_value = $list[$value['column_name']];
                                 }
                             ?>
                             <input type="<?php echo $input_type ?>" class="form-control" id="<?php echo $field['column_name'] ?>" name="<?php echo $field['column_name'] ?>" value="<?php echo $input_value ?>">
