@@ -56,16 +56,7 @@ switch
                         foreach($fields as $field) {?>
                         <div class="mb-3">
                             <label for="<?php echo $field['column_name'] ?>" class="form-label"><?php echo Label::get($field['column_name']) ?></label>
-                            <?php 
-                                if($field['column_name'] == 'password'){
-                                    $input_type = 'password';
-                                    $input_value = '';
-                                } else {
-                                    $input_type = 'text';
-                                    $input_value = $list[$field['column_name']];
-                                }
-                            ?>
-                            <input type="<?php echo $input_type ?>" class="form-control" id="<?php echo $field['column_name'] ?>" name="<?php echo $field['column_name'] ?>" value="<?php echo $input_value ?>">
+                            <input type="text" class="form-control" id="<?php echo $field['column_name'] ?>" name="<?php echo $field['column_name'] ?>" value="<?php echo $list[$field['column_name']] ?>">
                         </div>
                     <?php } ?>
                 </div>
