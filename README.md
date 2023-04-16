@@ -8,11 +8,11 @@ Senha: demo
 
 ## Instalação ##
 
-`git clone https://github.com/joaojkuligowski/testeecg.git`
-`cd testeecg`
-`composer install`
-`composer dumpautoload`
-`cp .env_example .env`
+`git clone https://github.com/joaojkuligowski/testeecg.git
+cd testeecg
+composer install
+composer dumpautoload
+cp .env_example .env`
 
 Editar Arquivo .env inserindo seu banco de dados
 

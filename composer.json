@@ -15,7 +15,7 @@
     },
     "scripts": {
         "criar-database": [
-            "@php config/criar_db.php"
+            "@php migrate.php"
         ],
         "servidor": [
             "@php -S localhost:8001"
